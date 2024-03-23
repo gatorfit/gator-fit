@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gator Fitness Training Program Waitlist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome for icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+    <style>
+        /* Global Reset */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('https://images.squarespace-cdn.com/content/5ffdcb312a5c024fdfd25627/1615346823247-IQQJRBKTLE5TE2IEG6IV/The+FIITCo-high.gif?content-type=image%2Fgif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            padding-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: #2ecc71; /* Green color */
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #777;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Increased opacity */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: left;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container select {
+            width: calc(100% - 20px);
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-container input[type="text"]:focus,
+        .form-container input[type="email"]:focus,
+        .form-container select:focus {
+            border-color: #2ecc71; /* Green color */
+        }
+
+        .form-container button {
+            background-color: #2ecc71;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #27ae60; /* Darker green color */
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .form-container {
+                padding: 20px;
+            }
+
+            .form-container input[type="text"],
+            .form-container input[type="email"],
+            .form-container select {
+                font-size: 0.9rem;
+            }
+
+            .form-container button {
+                font-size: 1rem;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Gator Fitness</h1>
+
+    </div>
+
+    <div class="form-container">
+
+          <p>Join our waitlist and embark on a transformative fitness journey with Gator Fitness. Experience personalized training programs tailored to your goals, expert guidance from certified instructors, and a supportive community that empowers you to unleash your full potential. Start your journey towards a stronger, healthier you today!</p>
+
+          <br>
+    
+        <form action="submit_form.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <label for="goals">Fitness Goals:</label>
+            <select id="goals" name="goals">
+                <option value="Weight loss">Weight loss</option>
+                <option value="Muscle gain">Muscle gain</option>
+                <option value="Fitness improvement">Fitness improvement</option>
+                <option value="Fitness improvement">Strength</option>
+                <option value="Fitness improvement">Calisthenics</option>
+            </select>
+
+            <button type="submit">Join Waitlist <i class="fas fa-arrow-right"></i></button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
