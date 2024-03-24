@@ -127,7 +127,6 @@
         }
     </style>
 </head>
-
 <body>
 
 <div class="container">
@@ -142,7 +141,7 @@
 
           <br>
     
-        <form action="submit_form.php" method="POST">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required placeholder="Enter your name">
 
@@ -154,12 +153,20 @@
                 <option value="Weight loss">Weight loss</option>
                 <option value="Muscle gain">Muscle gain</option>
                 <option value="Fitness improvement">Fitness improvement</option>
-                <option value="Fitness improvement">Strength</option>
-                <option value="Fitness improvement">Calisthenics</option>
+                <option value="Strength">Strength</option>
+                <option value="Calisthenics">Calisthenics</option>
             </select>
 
             <button type="submit">Join Waitlist <i class="fas fa-arrow-right"></i></button>
         </form>
+        <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $name = $_POST["name"];
+                $email = $_POST["email"];
+                $goals = $_POST["goals"];
+                echo "<p>Thank you, $name, for joining our waitlist. We'll reach out to you soon regarding your fitness goals!</p>";
+            }
+        ?>
     </div>
 </div>
 
